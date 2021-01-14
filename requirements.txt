@@ -52,3 +52,4 @@ urllib3==1.26.2
 view==0.1
 views==0.3
 Werkzeug==1.0.1
+psycopg2==2.6.2

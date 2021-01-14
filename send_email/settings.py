@@ -25,7 +25,7 @@ SECRET_KEY = '$w5p801xutlnf-vz_3(29ye2)&x67uxrhs367rw1ao@1t(kk6^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,6 +120,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
